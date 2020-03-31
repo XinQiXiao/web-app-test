@@ -1,0 +1,44 @@
+@import './default.less';
+
+.container {
+	display: flex;
+	.nav-left {
+		height: calc(100vh);
+		background-color: @colorBlackA;
+	}
+	.main {
+		height: calc(100vh);
+		background-color: @colorWhiteA;
+		overflow: auto;
+	}
+	.content {
+		position: relative;
+		padding: 20px;
+		// background-color: blue;
+		// flex: 1
+	}
+}
+
+.content-wrap {
+	background-color: @colorWhiteB;
+	border: 1px solid @colorGrayB;
+	margin-top: -3px;
+	// 调整表格左右重叠部分 （与content-wrap重叠）
+	.ant-table-wrapper {
+		margin-left: -1px;
+		margin-right: -2px;
+	}
+}
+
+.clearfix{
+	&::after{
+			content:' ';
+			clear:both;
+			display: block;
+			visibility: hidden;
+	}
+}
+
+ul,li{
+	list-style: none;
+}
