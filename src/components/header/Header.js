@@ -27,9 +27,9 @@ export default class Header extends Component{
 					</Col>
                 </Row>
                 <Row className="header-breadcrumb">
-					{/* <Col span={4} className="breadcrumb-title">
-						<span>{menuName}</span>
-					</Col> */}
+					<Col span={4} className="breadcrumb-title">
+						<span>{'首页'}</span>
+					</Col>
 					<Col span={20} className="time-view">
 						<span>{systemTime}</span>
 					</Col>
