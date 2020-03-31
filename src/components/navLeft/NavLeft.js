@@ -4,7 +4,6 @@ import { Menu, } from 'antd'
 
 // style
 import './navleft.less'
-import { render } from '@testing-library/react'
 
 // const 
 const SubMenu = Menu.SubMenu 
