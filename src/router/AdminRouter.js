@@ -16,7 +16,9 @@ class AdminRouter extends Component{
                 </Col>
                 <Col span={20} className="main">
                     <Header />
-                    <Row className="content">{this.props.children}</Row>
+                    <div className="content">
+                        {this.props.children}
+                    </div>
                     <Footer />
                 </Col>
             </Row>

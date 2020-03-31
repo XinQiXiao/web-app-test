@@ -25,6 +25,10 @@ export default class Navleft extends Component{
             {   
                 title:'首页',
 		        key:'/'
+            },
+            {
+                title:'用户',
+		        key:'/user'
             }
         ]
         const menuTreeNode = this._renderMenu(menuList)
@@ -51,6 +55,12 @@ export default class Navleft extends Component{
 		})
     }
 
+    _menuItemClick = ({item, key})=>{
+		this.setState({
+			currentKey: key,
+		})
+	}
+
     render(){
         const {menuTreeNode, currentKey} = this.state
         return (
@@ -58,7 +68,7 @@ export default class Navleft extends Component{
                 <div className="menu-title">
 					<h1>后台系统</h1>
 				</div>
-                <Menu theme="dark" selectedKeys={[currentKey]} onClick={()=>null}>
+                <Menu theme="dark" selectedKeys={[currentKey]} onClick={this._menuItemClick}>
                     {menuTreeNode}
                 </Menu>
             </div>

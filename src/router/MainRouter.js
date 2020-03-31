@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Route, HashRouter, Switch } from 'react-router-dom'
+import { Route, HashRouter, Switch, Redirect } from 'react-router-dom'
 
 // router
 import AdminRouter from './AdminRouter'
 
 // page
-import { HomePage } from '../page'
+import { HomePage, UserListPage } from '../page'
 
 class App extends Component{
     render(){
@@ -26,7 +26,9 @@ export default class RouterComponent extends Component{
                         <Route path="/" render={()=>
                             <AdminRouter>
                                 <Switch>
-                                    <Route path="/" component={HomePage}/>
+                                    <Route path="/home" component={HomePage}/>
+                                    <Route path="/user" component={UserListPage}/>
+                                    <Redirect to="/home"/>
                                 </Switch>
                             </AdminRouter>
                         }/>
